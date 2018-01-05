@@ -26,14 +26,14 @@ body{
     margin: 0 auto;
 }
 
-.box01{
-    /* position: absolute; */
+/* .box01{
+    position: absolute; 
     width: 68.5px;
     height: 88px;
     z-index: 2;
     top: 110px;
     left: 300px;
-}
+} */
 
 .box02{
     position: absolute;
