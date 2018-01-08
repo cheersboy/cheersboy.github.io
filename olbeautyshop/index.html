@@ -25,6 +25,110 @@ body{
     background-attachment: fixed;
 }
 
+/* pc版 */
+
+
+.pc{
+    /* min-width: 1200px; */
+    display: block;
+}
+
+.tablet{
+    display: none;
+}
+
+/* 視窗設定 */
+#space{
+    width: 100%;
+    height: 15vh;
+}
+
+.outside{
+    width: 100%;
+    height: 100%;
+    
+
+}
+.box00{
+    width: 80%;
+    z-index: -5;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.door{
+    height: 100vh;
+}
+
+.shop{
+    height: 100vh; 
+}
+
+.box01{
+    width: 100%;
+    height: 100px;
+}
+
+.box02{
+    width:45%;
+    height: 8000px;
+    background-color: rgba(0, 255, 255, 0.26);
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    right: 25vw;
+    top: 0;
+    padding-right: 20px;
+}
+
+.space_1{
+    width: 100%;
+
+}
+
+.a{
+    width: 100%;
+    height: 69px;
+    margin-left: 20vw;
+    background-color: rgba(212, 27, 83, 0.911);
+}
+
+/* bottom */
+
+#icon{
+    width: 40px;
+    height: 210px;
+    position: fixed;
+    right: 15px;
+    bottom: 180px;
+    z-index: 20;
+}
+
+.icon{
+    width: 40px;
+    height: 30px;
+}
+
+.space-1{
+    width: 40px;
+    height: 20px;
+}
+
+
+
+
+/* tablet版 */
+
+@media screen and (max-width: 1024px) {
+    .pc {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+
+/* 視窗設定 */
 #space{
     width: 100%;
     height: 15vh;
@@ -82,20 +186,7 @@ body{
 }
 
 
-
-
-/* .bottom {
-        width: 100%;
-        height: 70px;
-    }
-#icon {
-        display: flex;
-    }
-.icon {
-        flex: 1;
-        text-align: center;
-        padding-top: 15px;
-    } */
+}
 
 
     </style>
@@ -105,61 +196,149 @@ body{
 <body>
     
 
-    <div id="space"></div>
+    <!-- pc版 -->
+    <div class="pc">
 
-    <div class="outside"></div>
+        <div id="space"></div>
 
-    <div class="box00">
-        <img width="360px" height="570px" src="img/拱門.gif" alt="">
-        <div class="box01"></div>    
-        <img width="360px" height="570px" src="img/攤位.gif" alt="">
-    </div>
+        <!-- <div class="outside"></div> -->
 
-
-    <!-- <div class="box02">    -->
-        <a href="https://www.facebook.com/olbeauty123/">
-            <div class="box02"></div>
-        </a>
-    <!-- </div> -->
-
-    
-    <div class="bottom">
-        <div id="icon">
-            <div class="icon">
-                <a href="https://www.facebook.com/olbeauty123/">
-                    <img width="40px" height="40px" src="img/fb.png" alt="">
-                </a>
-            </div>
-            
-            <div class="space-1"></div>
-
-            <div class="icon">
-                <a href="https://www.olbeautyshop.com/">
-                    <img width="40px" height="40px" src="img/home.png" alt="">
-                </a>
-            </div>
-            
-            <div class="space-1"></div>
-
-            <div class="icon">
-                <a href="https://line.me/ti/p/%40rfj3101j">
-                    <img width="40px" height="40px" src="img/line.png" alt="">
-                </a>
-            </div>
-
-            <div class="space-1"></div>
-            
-            <div class="icon">
-                <a href="#space">
-                    <img width="40px" height="40px" src="img/top.png" alt="">
-                </a>
-            </div>
-           
+        <div class="box00">
+            <img class="door"  src="img/拱門.gif" alt="">
+            <div class="box01"></div>    
+            <img class="shop"  src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img class="shop"  src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img class="shop"  src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img class="shop"  src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img class="shop"  src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img class="shop"  src="img/攤位.gif" alt="">
         </div>
+
+
+        <div class="box02">
+            <div class="space_1"></div>
+            <div class="a">   
+            <a id="a" href="https://www.facebook.com/olbeauty123/">
+                <div class="a"></div>
+            </a>
+            </div>
+        </div>
+
+        
+
+        <!-- icon -->
+        <div class="bottom">
+            <div id="icon">
+                <div class="icon">
+                    <a href="https://www.facebook.com/olbeauty123/">
+                        <img width="40px" height="40px" src="img/fb.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1"></div>
+
+                <div class="icon">
+                    <a href="https://www.olbeautyshop.com/">
+                        <img width="40px" height="40px" src="img/home.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1"></div>
+
+                <div class="icon">
+                    <a href="https://line.me/ti/p/%40rfj3101j">
+                        <img width="40px" height="40px" src="img/line.png" alt="">
+                    </a>
+                </div>
+
+                <div class="space-1"></div>
+                
+                <div class="icon">
+                    <a href="#space">
+                        <img width="40px" height="40px" src="img/top.png" alt="">
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+
     </div>
 
 
+    <!-- Tablet版 -->
 
+    <div class="tablet">
+
+        <div id="space"></div>
+
+        <!-- <div class="outside"></div> -->
+
+        <div class="box00">
+            <img width="360px" height="570px" src="img/拱門.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+        </div>
+
+
+        <!-- <div class="box02">    -->
+            <a href="https://www.facebook.com/olbeauty123/">
+                <div class="box02"></div>
+            </a>
+        <!-- </div> -->
+
+        
+        <!-- icon -->
+        <div class="bottom">
+            <div id="icon">
+                <div class="icon">
+                    <a href="https://www.facebook.com/olbeauty123/">
+                        <img width="40px" height="40px" src="img/fb.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1"></div>
+
+                <div class="icon">
+                    <a href="https://www.olbeautyshop.com/">
+                        <img width="40px" height="40px" src="img/home.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1"></div>
+
+                <div class="icon">
+                    <a href="https://line.me/ti/p/%40rfj3101j">
+                        <img width="40px" height="40px" src="img/line.png" alt="">
+                    </a>
+                </div>
+
+                <div class="space-1"></div>
+                
+                <div class="icon">
+                    <a href="#space">
+                        <img width="40px" height="40px" src="img/top.png" alt="">
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
 
 
 
