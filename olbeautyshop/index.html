@@ -25,6 +25,13 @@ body{
     background-attachment: fixed;
 }
 
+.btn{
+    height: 100px;
+    width: 500px;
+    position: relative;
+    
+}
+
 /* pc版 */
 
 
@@ -317,7 +324,11 @@ body{
             </a>
             
         </div>
-        
+<!-- 下面是點擊複製的部分 -->
+        <button class="btn" data-clipboard-text="貼上有這個就代表複製成功囉">
+            你按看看啊
+        </button>
+<!-- 上面是點擊複製的部分 -->
         <div class="box02">
             <div class="space_1"></div>
             <div class="b">   
@@ -526,8 +537,25 @@ body{
 
 
 
+<!-- 下面是點擊複製的部分 -->
+    <script src="js/clipboard.min.js"></script>
+    <script>
+        var clipboard = new Clipboard('.btn');
 
+        clipboard.on('success', function(e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
 
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+        });
+    </script>
+<!-- 上面是點擊複製的部分 -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script>
     $('#top').click(function(){  
