@@ -265,7 +265,7 @@ body{
     position: relative;
     /* margin: 0 auto; */
     z-index: 5;
-    width: 110px;
+    width: 100px;
     height: 50px;
     left: 35%;
     margin-top: 80vh;
@@ -276,6 +276,7 @@ body{
     letter-spacing: 2px;
     font-weight: bold;
     outline:none;
+    font-size: 10px;
 }
 
 .a-ta{
@@ -588,7 +589,7 @@ body{
 
 <!-- 下面是點擊複製的部分 -->
     <script src="js/clipboard.min.js"></script>
-    <script>
+    <!-- <script>
         var clipboard = new Clipboard('.btn');
 
         clipboard.on('success', function(e) {
@@ -603,8 +604,42 @@ body{
             console.error('Action:', e.action);
             console.error('Trigger:', e.trigger);
         });
-    </script>
+    </script> -->
 <!-- 上面是點擊複製的部分 -->
+
+<!-- 下面是點擊複製的部分 -->
+<script>
+
+var copy = new Clipboard('.btn');
+
+copy.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+
+copy.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
+var cut = new Clipboard('.btn-ta');
+
+cut.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+
+cut.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+</script>
+<!-- 上面是點擊複製的部分 -->
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script>
     $('#top').click(function(){  
