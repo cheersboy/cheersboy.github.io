@@ -120,6 +120,18 @@
         margin: 0 auto;
     }
 
+    /* top */ 
+    #top{
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        right: 380px;
+        top: 800px;
+        display: none;
+        z-index: 20;
+    }
+
+
 
 
         
@@ -246,6 +258,12 @@
     <div class="join03">
         <img width="990px" src="img/點我報名-07.png" alt="">
     </div>
+
+    <!-- top -->
+    <div id="top">
+            <img width="35px" height="35px" src="img/back to top.png" alt="">
+    </div>
+    
     
 
 
@@ -275,9 +293,11 @@
             });
 
     </script>
-        
+
+
+    <!-- swiper -->    
     <script>   
-        // swiper 
+         
         var galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
             navigation: {
@@ -294,6 +314,32 @@
         });
         galleryTop.controller.control = galleryThumbs;
         galleryThumbs.controller.control = galleryTop;
+    </script>
+
+    <!-- back to top -->
+
+    <script>
+        $('#top').click(function(){  
+            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+             scrollTop: 0
+            }, 300);
+           
+            return false;
+            });
+
+        $(window).scroll(function () {
+    
+        var top=$(window).scrollTop()
+
+        if(top > 20){
+            
+            $('#top').fadeIn("slow");
+        }else{
+            $('#top').fadeOut("slow");
+        };
+
+        });
     </script>
     
 
