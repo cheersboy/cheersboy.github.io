@@ -145,7 +145,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(226, 24, 95)">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <a href="https://guigui223.github.io/tiramisu/"><img class="logo" width="180px" src="img/logo-white-En.png" alt=""></a> 
+                <a href="https://cheersboy.github.io/olbeautyshop-Match/"><img class="logo" width="180px" src="img/logo-white-En.png" alt=""></a> 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -155,16 +155,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     
-                    <li class="nav-item">
+                    <li class="nav-item" id="nav01">
                         <a class="nav-link" href="#box01">回到頂端</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="nav02">
                         <a class="nav-link" href="#analysis">數據分析</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="nav03">
                         <a class="nav-link" href="#activity">活動照片</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="nav04">
                         <a class="nav-link" href="#good">優勢分析</a>
                     </li>
                     <li class="nav-item active">
@@ -341,7 +341,43 @@
 
         });
     </script>
+
+    <!-- nav點擊滑動事件 -->
+    <script>
+    $('#nav01').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 0
+        }, 300);
+        return false;
+    });
+
+    $('#nav02').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 1700
+        }, 300);  
+        return false;
+    });
+
+    $('#nav03').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 3480
+        }, 300);  
+        return false;
+    });
     
+    $('#nav04').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 4920
+        }, 300);  
+        return false;
+    });
+    </script>
+
+
 
     
     
