@@ -17,32 +17,33 @@
 
     body{
         font-family:微軟正黑體;
-        height: 2000px;
     }
 
+    /* 顯示電腦隱藏手機 */
     .com{
-            display: block;
-        }
-        .ph{
-            display: none;
-        }
+        display: block;
+    }
+    .ph{
+        display: none;
+    }
 
     /* navbar */
     .navbar{
-        width: 100%;
-        height: 80px;
-        background-color: #e21860;
+        
+        /* background-color: #e21860; */
         position: fixed;
-        top: 0;
         z-index: 1000;
-        transition-duration: 0.5s;
-        min-width: 1200px;
+        width: 100%;
+        /* height: 80px; */
+        /* transition-duration: 0.5s; */
+        /* min-width: 1200px; */
+        /* top: 0; */
     }
 
-    .white{
+    /* .white{
         background-color: rgba(226, 24, 95, 0.897)!important;
         transition-duration: 1s;   
-    }
+    } */
 
     /* 至頂方格 */
     .box01{
@@ -167,6 +168,27 @@
     .good{
         width: 960px;
         margin: 0 auto;
+        position: relative;
+    }
+
+    .con01{
+        width: 500px;
+        height: 500px;
+        /* background-color: aqua; */
+        position: absolute;
+        left: 20px;
+        bottom: 1650px;
+        z-index: 80;
+    }
+
+    .con02{
+        width: 400px;
+        height: 400px;
+        /* background-color: aqua; */
+        position: absolute;
+        right: 20px;
+        bottom: 1390px;
+        z-index: 80;
     }
 
     /* 加入我們02 */
@@ -202,8 +224,8 @@
 
 
 
-    /* 手機部分 */
-    @media screen and (max-width: 767px){
+    /* 顯示手機隱藏電腦 */
+    @media screen and (max-width: 959px){
         .com{
             display: none;
         }
@@ -222,12 +244,12 @@
 </head>
 <body>
 
-<div class="com">
+
     <!-- NAV部分 -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(226, 24, 95)">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <a href="https://cheersboy.github.io/olbeautyshop-match/"><img class="logo" width="150px" src="img/logo-white-En.png" alt=""></a> 
+                <a href="https://cheersboy.github.io/olbeautyshop-match/"><img class="logo" width="235px" src="img/logo-white-En.png" alt=""></a> 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -260,6 +282,8 @@
         </div>
     </nav>
 
+
+    <div class="com">
     <!-- 至頂方格 -->
     <div class="box01" id="box01"></div>
 
@@ -280,7 +304,7 @@
 
     <!-- 數據分析 -->
     <div class="analysis" id="analysis">
-        <img width="960px" src="img/com/為什麼要跟小資女一起去展覽表格.png" alt="">
+        <img width="960px" src="img/com/為什麼要跟小資女一起去展覽表格02.png" alt="">
     </div>
 
     <!-- 分隔 -->
@@ -402,9 +426,14 @@
 
     <!-- 優勢分析 -->
     <div class="good" id="good">
-        <img width="960px" src="img/com/交給專業行銷公司事半功倍01.png" alt="">
+        <img width="960px" src="img/com/交給專業行銷公司事半功倍02.png" alt="">
+        <a href="https://www.olbeautyshop.com/">
+            <div class="con01"></div>
+        </a>
+        <a href="https://tw.mall.yahoo.com/store/%E5%B0%8F%E8%B3%87%E5%A5%B3%E7%BE%8E%E9%BA%97%E5%B0%8F%E8%88%96:olbeautyshop">
+            <div class="con02"></div>
+        </a>
     </div>
-
     <!-- 分隔 -->
     <div class="box02">
         <img id="girl" src="img/分隔小資女搖頭動畫.gif" alt="">
@@ -433,7 +462,8 @@
 </div>
 
 <div class="ph">
-
+    
+    
 
 </div>
     
