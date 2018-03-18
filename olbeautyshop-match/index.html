@@ -20,6 +20,13 @@
         height: 2000px;
     }
 
+    .com{
+            display: block;
+        }
+        .ph{
+            display: none;
+        }
+
     /* navbar */
     .navbar{
         width: 100%;
@@ -45,8 +52,21 @@
 
     /* 加入我們 */
     .join{
-        width: 990px;
+        width: 960px;
         margin: 0 auto;
+        position: relative;
+    }
+
+    #btn00{
+        width: 350px;
+        height: 70px;
+        background-color: rgb(253, 232, 39);
+        border-radius: 40px;
+        outline:none;
+        z-index: 20;
+        position: absolute;
+        right: 130px;
+        bottom: 52px;
     }
 
     /* 分隔 */
@@ -63,17 +83,58 @@
 
     /* 數據分析 */
     .analysis{
-        width: 990px;
+        width: 960px;
         margin: 0 auto;
     }
     
     /* 活動照片 */
     .activity{
-        width: 990px;
+        width: 960px;
         margin: 0 auto;
     }
 
-    .swiper-container{
+    #btn01{
+        width: 350px;
+        height: 80px;
+        background-color: rgb(255, 230, 0);
+        border-radius: 40px;
+        margin: 0 0 0 15px;
+        margin-right: 15px;
+        outline:none;
+    }
+
+    #btn02{
+        width: 350px;
+        height: 80px;
+        background-color: rgb(255, 230, 0);
+        border-radius: 40px;
+        outline:none;
+    }
+
+        .swiper-container {
+        width: 100%;
+        height: 800px;
+        margin: 0px auto;
+    }
+    
+    .append-buttons {
+        text-align: center;
+    }
+    .append-buttons a {
+        display: inline-block;
+      /* border: 1px solid #007aff;
+      color: #007aff; */
+        text-decoration: none;
+        padding: 4px 10px;
+        border-radius: 4px;
+        margin: 0 10px;
+    }
+
+    .append-buttons{
+        margin-bottom: 30px;
+    }
+
+    /* .swiper-container{
         width: 100%;
         height: 700px;
     }
@@ -96,7 +157,7 @@
 
     .gallery-thumbs .swiper-slide-active {
       opacity: 1;
-    }
+    } */
     
 
     
@@ -104,20 +165,28 @@
 
     /* 優勢分析 */
     .good{
-        width: 990px;
+        width: 960px;
         margin: 0 auto;
     }
 
     /* 加入我們02 */
     .join02{
-        width: 990px;
+        width: 960px;
         margin: 0 auto;
     }
 
     /* 點我報名 */
     .join03{
-        width: 990px;
+        width: 960px;
         margin: 0 auto;
+    }
+
+    #btn03{
+        width: 100%;
+        height: 300px;
+        background-color: rgb(255, 234, 44);
+        border-radius: 40px;
+        outline:none;
     }
 
     /* top */ 
@@ -133,6 +202,18 @@
 
 
 
+    /* 手機部分 */
+    @media screen and (max-width: 767px){
+        .com{
+            display: none;
+        }
+        .ph{
+            display: block;
+        }
+    }
+
+
+
 
         
     </style>
@@ -141,11 +222,12 @@
 </head>
 <body>
 
+<div class="com">
     <!-- NAV部分 -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(226, 24, 95)">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <a href="https://cheersboy.github.io/olbeautyshop-Match/"><img class="logo" width="180px" src="img/logo-white-En.png" alt=""></a> 
+                <a href="https://cheersboy.github.io/olbeautyshop-match/"><img class="logo" width="150px" src="img/logo-white-En.png" alt=""></a> 
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -162,13 +244,13 @@
                         <a class="nav-link" href="#analysis">數據分析</a>
                     </li>
                     <li class="nav-item" id="nav03">
-                        <a class="nav-link" href="#activity">活動照片</a>
+                        <a class="nav-link" href="#activity">活動現場</a>
                     </li>
                     <li class="nav-item" id="nav04">
                         <a class="nav-link" href="#good">優勢分析</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="google表單網址">加入我們
+                        <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScMsmQtEDay77J16P02K2Fj8FgdzY0qvbdQXmsNh7w2d9IS4Q/viewform">加入我們
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -183,7 +265,12 @@
 
     <!-- 加入我們 -->
     <div class="join">
-        <img width="990px" src="img/加入我們00.png" alt="">
+        <img width="960px" src="img/com/加入我們01.png" alt="">
+        <button id="btn00">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMsmQtEDay77J16P02K2Fj8FgdzY0qvbdQXmsNh7w2d9IS4Q/viewform">
+                <img width="320" src="img/com/填寫報名表.png" alt="">
+            </a>
+        </button>
     </div>
 
     <!-- 分隔 -->
@@ -193,7 +280,7 @@
 
     <!-- 數據分析 -->
     <div class="analysis" id="analysis">
-        <img width="990px" src="img/為什麼要跟小資女一起去展覽表格-02.png" alt="">
+        <img width="960px" src="img/com/為什麼要跟小資女一起去展覽表格.png" alt="">
     </div>
 
     <!-- 分隔 -->
@@ -203,34 +290,108 @@
 
     <!-- 活動照片 -->
     <div class="activity" id="activity">
-        <img width="990px" src="img/活動現場00.png" alt="">
+        <img width="960px" src="img/com/活動現場02.png" alt="">
         
-        <!-- Swiper 台中-->
-        <div class="swiper-container gallery-top">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <iframe width="100%" height="700px" src="https://www.youtube.com/embed/uUUuPHSSTZ4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide" style="background-image:url(img/mid/IMG_1418.JPG)"></div>
-                <div class="swiper-slide" style="background-image:url(img/mid/IMG_1420.JPG)"></div>
-                <div class="swiper-slide" style="background-image:url(img/mid/IMG_1430.JPG)"></div>
-                <div class="swiper-slide" style="background-image:url(img/mid/IMG_1431.JPG)"></div>
-                
-            </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"></div>
-        </div>
-            <div class="swiper-container gallery-thumbs">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide" style="background-image:url(img/mid/youtube01.JPG)"></div>
-                  <div class="swiper-slide" style="background-image:url(img/mid/IMG_1418.JPG)"></div>
-                  <div class="swiper-slide" style="background-image:url(img/mid/IMG_1420.JPG)"></div>
-                  <div class="swiper-slide" style="background-image:url(img/mid/IMG_1430.JPG)"></div>
-                  <div class="swiper-slide" style="background-image:url(img/mid/IMG_1431.JPG)"></div>
-            </div>
-        </div>
+        <!-- Swiper -->
+        <div class="photo01">
 
+                <div class="swiper-container">
+                    <p class="append-buttons">
+                        <a href="#" class="slide-1">
+                            <button id="btn01">
+                                <img src="img/com/台中01.png" alt="">
+                            </button>
+                        </a>
+                        <a href="#" class="slide-7">
+                            <button id="btn02">
+                                <img src="img/com/台北01.png" alt="">
+                            </button>
+                        </a>
+                    </p>
+
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" >
+                            <img src="img/com/幻燈片-台中-01.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" >
+                            <iframe width="100%" height="700px" src="https://www.youtube.com/embed/uUUuPHSSTZ4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" >
+                            <img src="img/mid/Ta01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" >
+                            <img src="img/mid/Ta02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="4" >
+                            <img src="img/mid/Ta03.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="5" >
+                            <img src="img/mid/Ta04.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="6" >
+                            <img src="img/com/幻燈片-台北-02.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="7" >
+                            <img src="img/north/Tp01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="8" >
+                            <img src="img/north/Tp02.jpg" alt="">
+                        </div>
+
+                                
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination">
+                            </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                      
+
+
+
+
+
+
+            <!-- <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div id="Taichung" class="swiper-slide" style="background-image:url(img/com/幻燈片-台中-01.png)"></div>
+                    <div class="swiper-slide">
+                        <iframe width="100%" height="700px" src="https://www.youtube.com/embed/uUUuPHSSTZ4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1418.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1420.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1430.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1431.JPG)"></div>
+
+                    <div id="Taipei" class="swiper-slide" style="background-image:url(img/com/幻燈片-台北-02.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/north/20170924-01.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/north/20170924-02.JPG)"></div>
+                    
+                </div>
+                    Add Arrows
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                    <div id="Taichung" class="swiper-slide" style="background-image:url(img/com/幻燈片-台中-01.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/youtube01.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1418.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1420.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1430.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/mid/IMG_1431.JPG)"></div>
+
+                    <div id="Taipei" class="swiper-slide" style="background-image:url(img/com/幻燈片-台北-02.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/north/20170924-01.JPG)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/north/20170924-02.JPG)"></div>
+
+                </div>
+            </div> -->
+        
+        </div>
         
     </div>
 
@@ -241,7 +402,7 @@
 
     <!-- 優勢分析 -->
     <div class="good" id="good">
-        <img width="990px" src="img/交給專業行銷公司事半功倍-02.png" alt="">
+        <img width="960px" src="img/com/交給專業行銷公司事半功倍01.png" alt="">
     </div>
 
     <!-- 分隔 -->
@@ -251,18 +412,30 @@
     
     <!-- 加入我們02 -->
     <div class="join02">
-        <img width="990px" src="img/加入我們02.jpg" alt="">
+        <img width="960px" src="img/com/加入我們03.png" alt="">
     </div>
 
     <!-- 點我報名 -->
     <div class="join03">
-        <img width="990px" src="img/點我報名-07.png" alt="">
+        <img width="960px" src="img/com/點我報名.png" alt="">
+        <button id="btn03">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMsmQtEDay77J16P02K2Fj8FgdzY0qvbdQXmsNh7w2d9IS4Q/viewform">
+                <img src="img/com/點我報名01.png" alt="">
+            </a>
+        </button>
     </div>
 
     <!-- top -->
     <div id="top">
             <img width="35px" height="35px" src="img/back to top.png" alt="">
     </div>
+
+</div>
+
+<div class="ph">
+
+
+</div>
     
     
 
@@ -294,16 +467,57 @@
 
     </script>
 
+    <!-- swiper00 -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 0,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            virtual: {
+                slides: (function () {
+                    var slides = [];
+                    for (var i = 0; i < 9; i += 1) {
+                    slides.push('Slide ' + (i + 1));
+                    }
+                    return slides;
+                }()),
+              },
+            });
+            document.querySelector('.slide-1').addEventListener('click', function (e) {
+              e.preventDefault();
+              swiper.slideTo(0, 0);
+            });
+            document.querySelector('.slide-7').addEventListener('click', function (e) {
+              e.preventDefault();
+              swiper.slideTo(6, 0);
+            });
+          </script>
+
+
 
     <!-- swiper -->    
-    <script>   
+    <!-- <script>   
          
         var galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
             navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+            hashnav: true,
             },
+
         });
         var galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
@@ -311,11 +525,13 @@
             slidesPerView: 'auto',
             touchRatio: 0.2,
             slideToClickedSlide: true,
+
         });
         galleryTop.controller.control = galleryThumbs;
         galleryThumbs.controller.control = galleryTop;
-    </script>
+    </script> -->
 
+    
     <!-- back to top -->
 
     <script>
@@ -355,7 +571,7 @@
     $('#nav02').click(function(){  
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         $body.animate({
-         scrollTop: 1700
+         scrollTop: 1665
         }, 300);  
         return false;
     });
@@ -363,7 +579,7 @@
     $('#nav03').click(function(){  
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         $body.animate({
-         scrollTop: 3480
+         scrollTop: 3400
         }, 300);  
         return false;
     });
@@ -371,11 +587,13 @@
     $('#nav04').click(function(){  
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         $body.animate({
-         scrollTop: 4920
+         scrollTop: 4690
         }, 300);  
         return false;
     });
     </script>
+
+
 
 
 
