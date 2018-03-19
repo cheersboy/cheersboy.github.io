@@ -70,6 +70,16 @@
         bottom: 52px;
     }
 
+    .home{
+        width: 420px;
+        height: 200px;
+        /* background-color: aqua; */
+        position: absolute;
+        bottom: -5px;
+        left: 15px;
+
+    }
+
     /* 分隔 */
     .box02{
         width: 100%;
@@ -295,6 +305,9 @@
                 <img width="320" src="img/com/填寫報名表.png" alt="">
             </a>
         </button>
+        <a href="https://www.olbeautyshop.com/">
+            <div class="home"></div>
+        </a>
     </div>
 
     <!-- 分隔 -->
@@ -617,7 +630,7 @@
     $('#nav04').click(function(){  
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         $body.animate({
-         scrollTop: 4690
+         scrollTop: 4710
         }, 300);  
         return false;
     });
