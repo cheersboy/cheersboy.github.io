@@ -59,10 +59,11 @@
         z-index: 20;
     }
 
-    .box{
-        width: 100px;
-        height: 100px;
-        background-color: #e61d4c;
+    .top{
+        position: fixed;
+        right: 4%;
+        bottom: 15%;
+        z-index: 25;
     }
 
     /* 引領趨勢 */
@@ -193,6 +194,10 @@
         </div>
     </a>
 
+    <div class="top" id="top">
+        <img width="40px" src="img/pc/top.png" alt="">
+    </div>
+
     <div class="video"> 
         <div class="video01">
             <img width="100%" src="img/pc/引領趨勢.gif" alt="">
@@ -227,6 +232,41 @@
         
         <img id="con" src="img/pc/聯絡.png" alt="">
     </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- back to top -->
+    <script>
+        $('#top').click(function(){  
+            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+             scrollTop: 0
+            }, 300);
+           
+            return false;
+            });
+
+        $(window).scroll(function () {
+    
+        var top=$(window).scrollTop()
+
+        if(top > 20){
+            
+            $('#top').fadeIn("slow");
+        }else{
+            $('#top').fadeOut("slow");
+        };
+
+        });
+    </script>
 
 
 
