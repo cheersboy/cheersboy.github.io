@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MiuFa秒翻沙發床</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+        
+    <style>
+    
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family:微軟正黑體;
+        /* height: 1000px; */
+    }
+
+    /* 顯示電腦隱藏手機 */
+    .com{
+        display: block;
+    }
+    .ph{
+        display: none;
+    }
+
+    /* navbar */
+    .navbar{
+        
+        /* background-color: #e21860; */
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        font-size: 90%;
+        padding-right: 20%;
+        padding-left: 20%;
+        /* height: 80px; */
+        /* transition-duration: 0.5s; */
+        /* min-width: 1200px; */
+        /* top: 0; */
+    }
+
+    /* 至頂方格 */
+    .box01{
+        width: 100%;
+        height: 62px;
+    }
+
+    /* 形象大圖 */
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color:#000;
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-bullet-active {
+      color:#fff;
+      background: #1e1f20;
+    }
+
+    /* 特色說明 */
+    .features{
+        /* margin-top: 80px; */
+        /* text-align: center; */
+        width: 100%;
+        margin: 0 center;
+        position: relative;
+    }
+
+
+    /* .h1{
+        font-weight: bolder;
+        letter-spacing: 3px;
+    }
+
+    .line{
+        width: 60%;
+        height: 3px;
+        background-color: rgb(247, 181, 44);
+        margin: center;
+    }
+
+    .text-01{
+        font-weight: bolder;
+        letter-spacing: 3px;
+        font-size: 20px;
+    } */
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    /* top */ 
+    #top{
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        right: 100px;
+        top: 800px;
+        display: none;
+        z-index: 20;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 顯示手機隱藏電腦 */
+    @media screen and (max-width: 959px){
+        .com{
+            display: none;
+        }
+        .ph{
+            display: block;
+        }
+        
+        .ph_box00{
+            width: 100%;
+            height: 80px;
+        }
+
+        
+
+        /* top */ 
+        #ph_top{
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            right: 40px;
+            top: 500px;
+            display: none;
+            z-index: 20;
+        }
+
+
+
+    }
+
+
+
+
+        
+    </style>
+
+
+</head>
+<body>
+
+
+    <!-- NAV部分 -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(237, 237, 237)">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <a href="https://cheersboy.github.io/olbeautyshop-match/"><img class="logo" width="100 px" src="img/MiuFa-logo.png" alt=""></a> 
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item" id="nav01">
+                        <a class="nav-link" href="#features"> 特色說明 </a>
+                    </li>
+                    <li class="nav-item" id="nav02">
+                        <a class="nav-link" href="#product"> 特賣商品 </a>
+                    </li>
+                    <li class="nav-item" id="nav03">
+                        <a class="nav-link" href="#experience"> 使用心得 </a>
+                    </li>
+                    <li class="nav-item" id="nav04">
+                        <a class="nav-link" href="#use"> 規格說明 </a>
+                    </li>
+                    <li class="nav-item" id="nav05">
+                        <a class="nav-link" href="#teach"> 使用教學 </a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="#buy">我要購買
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li> -->
+                    <li class="nav-item" id="nav06">
+                        <a class="nav-link" href="#buy">我要購買 </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="com">
+    <!-- 至頂方格 -->
+    <div class="box01" id="box01"></div>
+
+    <!-- 形象大圖 -->
+    <div class="big-image">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img width="100%" src="img/com/單人01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img width="100%" src="img/com/雙人01.jpg" alt="">
+                </div>
+            </div>
+        <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 特色說明 -->
+    <div class="features" id="features">
+        <!-- <div class="h1"><p>特色說明soglan</p></div>
+        <div class="line"></div>
+        <div class="text-01"><p>耐磨度高 防貓狗抓</p></div> -->
+        <img class="img01" width="100%" src="img/com/特色說明-03.png" alt="">
+    </div>
+
+    <!-- 特賣商品 -->
+    <div class="product" id="product">
+        <img class="img02" src="img/com/限時搶購-04.png" width="100%" alt="">
+    </div>
+
+    <!-- 使用心得 -->
+    <div class="experience" id="experience">
+        <img class="img03" src="img/com/部落客使用-05.png" width="100%" alt="">
+    </div>
+
+    <!-- 規格說明 -->
+    <div class="use" id="use">
+        <img class="img04" src="img/com/規格說明-06.png" width="100%" alt="">
+    </div>
+
+    <!-- 使用教學 -->
+    <div class="teach" id="teach">
+        <img class="img05" src="img/com/使用教學-07.png" width="100%" alt="">
+    </div>
+
+    <!-- 我要購買 -->
+    <div class="buy" id="buy">
+        <img class="img06" src="img/com/我要購買-08.png" width="100%" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- top -->
+    <div id="top">
+            <img width="35px" height="35px" src="img/back to top.png" alt="">
+    </div>
+
+</div>
+
+<div class="ph">
+
+    <div class="ph_box00"></div>
+
+    
+
+    <!-- top -->
+    <div id="ph_top">
+            <img width="50px" height="50px" src="img/back to top.png" alt="">
+    </div>
+
+
+    
+    
+
+</div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        // navbar顏色變換
+        $(window).scroll(function () {
+            var top = $(window).scrollTop()
+                if (top > 80) {
+                    $('.navbar').addClass('white');
+                } else {
+                    $('.navbar').removeClass('white');
+                }
+            });
+
+    </script>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            loop: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+          },
+        });
+    </script>
+
+
+
+    
+    <!-- back to top -->
+
+    <script>
+        $('#top').click(function(){  
+            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+             scrollTop: 0
+            }, 300);
+           
+            return false;
+            });
+
+        $(window).scroll(function () {
+    
+        var top=$(window).scrollTop()
+
+        if(top > 20){
+            
+            $('#top').fadeIn("slow");
+        }else{
+            $('#top').fadeOut("slow");
+        };
+
+        });
+    </script>
+
+    <!-- nav點擊滑動事件 -->
+    <!-- <script>
+    $('#nav01').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 750
+        }, 300);
+        return false;
+    });
+
+    $('#nav02').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 2150
+        }, 300);  
+        return false;
+    });
+
+    $('#nav03').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 3460
+        }, 300);  
+        return false;
+    });
+    
+    $('#nav04').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 6000
+        }, 300);  
+        return false;
+    });
+
+    $('#nav05').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 7750
+        }, 300);  
+        return false;
+    });
+
+    $('#nav06').click(function(){  
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+         scrollTop: 9900
+        }, 300);  
+        return false;
+    });
+    </script> -->
+
+    <!-- 手機板幻燈片 -->
+    <!-- <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            },
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+        });
+
+        $('.modal').on('shown.bs.modal', function (e) {
+            for (var i = 0; i < galleryTop.length; i++) {
+                galleryTop[i].update();
+                galleryThumbs[i].update();
+            } -->
+    </script>
+
+    <!-- 手機板back to top -->
+    <!-- back to top -->
+
+    <script>
+        $('#ph_top').click(function(){  
+            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+             scrollTop: 0
+            }, 300);
+           
+            return false;
+            });
+
+        $(window).scroll(function () {
+    
+        var top=$(window).scrollTop()
+
+        if(top > 20){
+            
+            $('#ph_top').fadeIn("slow");
+        }else{
+            $('#ph_top').fadeOut("slow");
+        };
+
+        });
+    </script>
+
+
+
+
+
+    
+    
+    
+</body>
+</html>
