@@ -7,6 +7,7 @@
     <title>KOL部落客整合</title>
 
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <style>
@@ -39,24 +40,84 @@
         margin: 0;
     }
 
+    /*  */
     .operating{
         width: 70%;
         margin: 0 auto;
         margin-top: 10%;
     }
 
+    /* 輪播圖 */
+    .slide{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
+
+    .swiper-container{
+        width: 100%;
+        height: 680px;
+    }
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-thumbs {
+       width: 100%;
+       height: 150px;
+       margin-top: 5px;
+    }
+
+    .gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .gallery-thumbs .swiper-slide-active {
+      opacity: 1;
+    }
+
+    /*  */
     .analysis{
         width: 70%;
         margin: 0 auto;
-        margin-top: 10%;
+        margin-top: -2%;
     }
-    
+
+
+
+
+
+
+    /* icon */
+    #home{
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            right: 20px;
+            top: 75%;
+            z-index: 20;
+    }
+
+
+    #top{
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            right: 20px;
+            top: 80%;
+            display: none;
+            z-index: 20;
+    }
 
     
     
     
     
-    
+
+
     
     
     
@@ -70,7 +131,7 @@
 
     <!-- <div id="box01" class="kol-btn"></div> -->
 
-    <a href="">
+    <a href="#operating">
         <div class="kol-btn">
             <img id="kol-btn01" width="65%" src="img/kol-pc/btn-操作實例.png" alt="">
         </div>
@@ -97,13 +158,63 @@
     </div>
 
     <!-- 操作實例 -->
-    <div class="operating">
-        <img width="100%" src="img/kol-pc/KOL-操作實例-09-09.png" alt="">
+    <div id="operating" class="operating">
+        <img width="100%" src="img/kol-pc/KOL-操作實例-20.png" alt="">
+
+        <!-- 輪播圖 -->
+        <div class="slide">
+                <img width="100%" src="img/kol-pc/KOL-操作實例-15.png" alt="">
+    
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-14.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-11.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-12.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-13.png)"></div>
+                    </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button-black"></div>
+                        <div class="swiper-button-prev swiper-button-black"></div>
+                </div>
+    
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-16.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-17.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-18.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/kol-pc/KOL-操作實例-19.png)"></div>
+    
+                    </div>
+                </div>
+            
+            </div>
+
+        <img width="100%" src="img/kol-pc/KOL-操作實例-09.png" alt="">
     </div>
 
     <!-- 效益分析 -->
     <div id="analysis" class="analysis">
         <img width="100%" src="img/kol-pc/KOL-效益分析-07.png" alt="">
+    </div>
+
+
+
+
+
+
+
+    <!-- icon -->
+    <div id="home">
+        <div class="icon">
+            <a href="https://cheersboy.github.io/olbeautyshop-program/">
+                <img width="35px" height="35px" src="img/kol-pc/home-02.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div id="top">
+        <img width="35px" height="35px" src="img/kol-pc/top.png" alt="">
     </div>
 
 
@@ -118,7 +229,68 @@
 
 
     <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/swiper.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <!-- swiper -->    
+    <script>   
+         
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hashnav: true,
+                },
+    
+            });
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                touchRatio: 0.2,
+                slideToClickedSlide: true,
+    
+            });
+            galleryTop.controller.control = galleryThumbs;
+            galleryThumbs.controller.control = galleryTop;
+            
+            
+            $(".swiper-container").each(function(){
+        $(this).swiper({
+            loop: true,
+            initialSlide :0,
+            pagination:$('.swiper-pagination',this),
+            nextButton: $('.arrow-right',this),
+            prevButton:$('.arrow-left',this)
+        });
+    });
+        </script>
+
+    <!-- back to top -->
+    <script>
+        $('#top').click(function(){  
+            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+             scrollTop: 0
+            }, 300);
+           
+            return false;
+            });
+
+        $(window).scroll(function () {
+    
+        var top=$(window).scrollTop()
+
+        if(top > 20){
+            
+            $('#top').fadeIn("slow");
+        }else{
+            $('#top').fadeOut("slow");
+        };
+
+        });
+    </script>
+    
 
 
 
