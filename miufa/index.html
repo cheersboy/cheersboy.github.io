@@ -29,7 +29,7 @@
         display: none;
     }
 
-    /* navbar */
+    /*手機板 navbar */
     .navbar{
         
         /* background-color: #e21860; */
@@ -45,10 +45,82 @@
         /* top: 0; */
     }
 
+    /* 電腦版nav */
+    .navbar-pc{
+    width: 100%;
+    height: 62px;
+    background-color: #EDEDED;
+    /* position: relative; */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition-duration: 0.5s;
+    min-width: 1200px;
+}
+
+
+.LOGO{
+    position: absolute;
+    width: 200px;
+    height: 62px;
+    text-align: center;
+    line-height: 62px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size:17px;
+    left: 22%;
+    transform: translateX(-50%);
+}
+
+.nav{
+    position: absolute;
+    right: 220px;
+    width:700px;
+    height:22px;
+    bottom: 70px;
+}
+
+#nav{ 
+    width:700px; 
+    margin:50px auto; 
+}
+
+#nav ul{ 
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+#nav li{
+    width:80px; 
+    height:22px; 
+    line-height:22px; 
+    float:left; 
+    overflow:hidden; 
+    text-align:center; 
+}
+
+#nav a{ 
+    width:80px;
+    float:left;
+    overflow:hidden;
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+}
+
+.white{
+    background-color: rgba(255, 255, 255, 0.712);
+    transition-duration: 1s;   
+}
+
     /* 至頂方格 */
     .box01{
         width: 100%;
         height: 62px;
+        color: #EDEDED;
+        
     }
 
     /* 形象大圖 */
@@ -255,7 +327,45 @@
 
 
     <!-- NAV部分 -->
-    
+    <div class="navbar-pc">
+        <a href="https://cheersboy.github.io/miufa/">
+            <div class="LOGO">
+            <img width="50%" src="img/MiuFa-logo.png" alt="">
+            </div>
+        </a>
+        <div class="nav">
+            <ul id="nav">
+                <li>
+                    <a href="#features">
+                        <span>特色說明</span></a>
+                </li>
+                <li>
+                    <a href="#product">
+                        <span>限時搶購</span></a>
+                </li>
+                <li>
+                    <a href="#experience">
+                        <span>部落客使用</span></a>
+                </li>
+                <li>
+                    <a href="#use">
+                        <span>規格說明</span></a>
+                </li>
+                <li>
+                    <a href="#teach">
+                        <span>使用教學</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>媒體報導</span></a>
+                </li>
+                <li>
+                    <a href="#buy">
+                        <span>我要購買</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 
     <div class="com">
@@ -278,7 +388,7 @@
         </div>
     </div>
 
-    <div class="box01" id="box01"></div>
+    <div class="box01" id="box01"> </div>
 
     <!-- 特色說明 -->
     <div class="features nav01" id="features">
@@ -490,20 +600,25 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    
+    
+    <!-- navbar顏色變換 -->
     <script>
-        // navbar顏色變換
+    
         $(window).scroll(function () {
-            var top = $(window).scrollTop()
-                if (top > 80) {
-                    $('.navbar').addClass('white');
-                } else {
-                    $('.navbar').removeClass('white');
-                }
-            });
+
+        var top = $(window).scrollTop()
+
+        if (top > 62) {
+            $('.navbar-pc').addClass('white');
+        } else {
+            $('.navbar-pc').removeClass('white');
+        }
+        });
 
     </script>
 
-
+    <!-- swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
           pagination: {
@@ -546,56 +661,7 @@
         });
     </script>
 
-    <!-- nav點擊滑動事件 -->
-    <!-- <script>
-    $('#nav01').click(function(){  
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-        $body.animate({
-         scrollTop: 750
-        }, 300);
-        return false;
-    });
-
-    $('#nav02').click(function(){  
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-        $body.animate({
-         scrollTop: 2150
-        }, 300);  
-        return false;
-    });
-
-    $('#nav03').click(function(){  
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-        $body.animate({
-         scrollTop: 3460
-        }, 300);  
-        return false;
-    });
     
-    $('#nav04').click(function(){  
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-        $body.animate({
-         scrollTop: 6000
-        }, 300);  
-        return false;
-    });
-
-    $('#nav05').click(function(){  
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-        $body.animate({
-         scrollTop: 7750
-        }, 300);  
-        return false;
-    });
-
-    $('#nav06').click(function(){  
-        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-        $body.animate({
-         scrollTop: 9900
-        }, 300);  
-        return false;
-    });
-    </script> -->
 
     
 
