@@ -231,7 +231,6 @@
     .contact{
         position: fixed;
         width: 100%;
-        position: fixed;
         bottom: 0;
         z-index: 1000;
     }
@@ -306,14 +305,62 @@
         .ph-product{
             position: relative;
         }
+        
+        /* 倒數計時 */
+        .ph-countdown-wrapper{ 
+            padding:50px 0px; 
+            position: absolute;
+            top:15%;
+        }
+        .ph-countdown{ 
+            margin:0 auto; 
+            padding: 10px 20px; 
+            border-radius: 4px; 
+            -moz-border-radius: 4px; 
+            -webkit-border-radius: 4px; 
+            }
+        .ph-timer-holder{ 
+            margin: 0 auto; 
+            text-align: center; 
+            width: 350px; 
+        }
+        .ph-timer-slot{ 
+            width: 22%; 
+            border: 1px solid #ccc; 
+            float: left; 
+            text-align: center; 
+            background-color: rgb(54, 52, 52); 
+            color: #fff; 
+            margin: 5px; 
+            padding: 5px; 
+            border-radius: 4px; 
+            -moz-border-radius: 4px; 
+            -webkit-border-radius: 4px; 
+        }
+        .ph-timer-time{
+            font-family: arial; 
+            font-size: 40px; 
+            }
+        .ph-timer-title{  
+            font-family: arial; 
+            font-size: 13px; 
+            padding: 0px 0px; }
+        .ph-clearfix{ 
+            float:none; 
+            clear: both; 
+            margin-bottom: 0 !important; 
+            }
+            
+
+        /* 售出GIF */
         #ph-buy93{
             position: absolute;
-            right: 3%;
-            top: 56%;
+            right: 5%;
+            top: 59%;
         }
         #ph-buy98{
             position: absolute;
-            right: 3%;
+            right: 5%;
             top: 80%;
         }
 
@@ -332,7 +379,13 @@
             bottom: 7%;
         }
 
-
+         /* 聯絡我們 */
+        .ph-contact{
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000;
+        }
 
         
 
@@ -341,7 +394,7 @@
             width: 40px;
             height: 40px;
             position: fixed;
-            right: 2px;
+            right: 3%;
             top: 60%;
             z-index: 20;
         }
@@ -350,7 +403,7 @@
             width: 40px;
             height: 40px;
             position: fixed;
-            right: 2px;
+            right: 3%;
             top: 66%;
             z-index: 20;
         }
@@ -359,7 +412,7 @@
             width: 40px;
             height: 40px;
             position: fixed;
-            right: 2px;
+            right: 3%;
             top: 72%;
             display: none;
             z-index: 20;
@@ -585,10 +638,10 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img width="100%" src="img/ph/單人03.jpg" alt="">
+                    <iframe width="100%" height="510" src="https://www.youtube.com/embed/e_7ivbE5zZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
                 <div class="swiper-slide">
-                    <img width="100%" src="img/ph/雙人03.jpg" alt="">
+                    <img width="100%" src="img/ph/雙人04.jpg" alt="">
                 </div>
             </div>
         <!-- Add Pagination -->
@@ -605,8 +658,45 @@
     <!-- 限時搶購 -->
     <div class="ph-product" id="ph_product">
         <img class="img02" src="img/ph/ph限時搶購-09.png" width="100%" alt="">
-        <img id="ph-buy93" width="14%" src="img/93.gif" alt="">
-        <img id="ph-buy98" width="14%" src="img/98.gif" alt="">
+
+        <!-- 倒數計時 -->
+        
+        <div id="ph-countdown" class="ph-countdown-wrapper" style="display: block;">
+            <div class="ph-countdown">
+              <div class="ph-timer-holder">
+                <div class="ph-timer-slot">
+                  <div id="ph-CountDownDays" class="ph-timer-time"> </div>
+                  <div class="ph-timer-title"> Days </div>
+                </div>
+                <div class="ph-timer-slot">
+                  <div id="ph-CountDownHours" class="ph-timer-time"> </div>
+                  <div class="ph-timer-title"> Hours </div>
+                </div>
+                <div class="ph-timer-slot">
+                  <div id="ph-CountDownMinutes" class="ph-timer-time"> </div>
+                   <div class="ph-timer-title"> Minutes </div>
+                </div>
+                <div class="ph-timer-slot">
+                  <div id="ph-CountDownSeconds" class="ph-timer-time"> </div>
+                  <div class="ph-timer-title"> Seconds </div>
+                </div>
+              </div>
+              <div class="ph-clearfix"></div>
+            </div>
+            </div>
+            
+            <div id="ph-showMsg" style="font-size: 54px; display: none;"> Time Up !!</div>
+
+
+
+
+
+
+
+
+
+        <img id="ph-buy93" width="12%" src="img/93.gif" alt="">
+        <img id="ph-buy98" width="12%" src="img/98.gif" alt="">
     </div>
 
     <!-- 消費者見證 -->
@@ -631,12 +721,20 @@
         <img class="img07" src="img/ph/ph媒體報導-21.png" width="100%" alt="">
         <div class="video01">
             <iframe width="100%" height="450" src="https://www.youtube.com/embed/aohiiyzNwhE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/e_7ivbE5zZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
+        <img src="img/ph/ph媒體報導-22.png" width="100%" alt="">
     </div>
 
     <!-- 我要購買 -->
     <div class="ph-buy" id="ph_buy">
         <img class="img06" src="img/ph/ph我要購買-13.png" width="100%" alt="">
+    </div>
+
+
+    <!-- 聯絡我們 -->
+    <div class="ph-contact">
+        <img src="img/ph/ph聯絡我們-20.png" width="100%" alt="">
     </div>
 
     
@@ -794,7 +892,48 @@
 
     
 
-    <!-- 手機板back to top -->
+    <!-- 手機板 -->
+
+    <!-- 倒數計時 -->
+    <script>
+    var dateNow = new Date();
+    var countdown_date = new Date(2018,10-1, 31, 24, 59).getTime();
+var days, hours, minutes, seconds;
+
+// update every 1 second
+var timer = setInterval(function () {CountdownTimer()}, 1000);
+function CountdownTimer() {
+  // calculate difference between now and countdown date
+  var current_date = new Date().getTime();
+  var seconds_left = (countdown_date - current_date) / 1000;
+
+  // calculations
+  days = parseInt(seconds_left / 86400);
+  seconds_left = seconds_left % 86400;
+
+  hours = parseInt(seconds_left / 3600);
+  seconds_left = seconds_left % 3600;
+
+  minutes = parseInt(seconds_left / 60);
+  seconds = parseInt(seconds_left % 60);
+
+  document.getElementById("ph-CountDownDays").innerHTML = (days);
+  document.getElementById("ph-CountDownHours").innerHTML = (hours);
+  document.getElementById("ph-CountDownMinutes").innerHTML = (minutes);
+  document.getElementById("ph-CountDownSeconds").innerHTML = (seconds);
+
+  if(seconds_left <= 0)
+  {
+    clearInterval(timer);
+    document.getElementById("ph-showMsg").style.display = "block";
+    document.getElementById("ph-countdown").style.display = "none";
+  }
+}
+
+    </script>
+
+
+
     <!-- back to top -->
 
     <script>
