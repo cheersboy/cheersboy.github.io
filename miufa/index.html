@@ -515,6 +515,7 @@
         <div id="time">
         <div id="countdown" class="countdownHolder"></div>
         </div>
+        <!-- 改日期要從JS改 -->
         <img id="buy93" width="7%" src="img/93.gif" alt="">
         <img id="buy98" width="7%" src="img/98.gif" alt="">
     </div>
@@ -692,7 +693,7 @@
             <div id="ph-showMsg" style="font-size: 54px; display: none;"> Time Up !!</div>
 
         </div>
-
+        <!-- 改日期要從JS改 -->
 
 
 
@@ -834,6 +835,7 @@
 		// The new year is here! Count towards something else.
 		// Notice the *1000 at the end - time must be in milliseconds
 		ts = (new Date()).getTime() + 31*24*60*60*1000;
+        // 日時分秒 電腦改日期由此更改
 		newYear = false;
 	}
 		
@@ -903,6 +905,7 @@
     var dateNow = new Date();
     var countdown_date = new Date(2018,10-1, 31, 24, 59).getTime();
 var days, hours, minutes, seconds;
+    // 手機改日期由此更改 年 月-1 日 時 分
 
 // update every 1 second
 var timer = setInterval(function () {CountdownTimer()}, 1000);
