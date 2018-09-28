@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFDEDE;
+    background-image: url("css/img/燈籠.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+}
+.outside{
+    width: 100%;
+    height: 100%;
+    
+
+}
+.box00{
+    width: 375px;
+    height: 580px;
+    z-index: -5;
+    position: relative;
+    top: 5vh;
+    margin: 0 auto;
+}
+
+/* .box01{
+    position: absolute; 
+    width: 68.5px;
+    height: 88px;
+    z-index: 2;
+    top: 110px;
+    left: 300px;
+} */
+
+.box02{
+    position: absolute;
+    width: 69px;
+    height: 89px;
+    z-index: 1;
+    top: 110px;
+    left: 287px;
+}
+
+.box03{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    z-index: 1;
+    top: 96px;
+    left: 0px;
+}

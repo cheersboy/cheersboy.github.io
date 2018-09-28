@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小資女陪你過好年</title>
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <style>
+    
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(253, 247, 160);
+    background-image: url("css/img/背景4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position-y: 20px; */
+    background-attachment: fixed;
+}
+
+.btn{
+    height: 100px;
+    width: 500px;
+    position: relative;
+    
+}
+
+/* pc版 */
+
+
+.pc{
+    /* min-width: 1200px; */
+    display: block;
+}
+
+.tablet{
+    display: none;
+}
+
+/* 視窗設定 */
+#space{
+    width: 100%;
+    height: 15vh;
+}
+
+
+
+#light{
+    z-index: -10;
+    width: 100%;
+    height: 4000px;
+    background-image: url("css/img/兩側燈籠-5.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.box00{
+    width: 100%;
+    z-index: -3;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.door{
+    height: 100vh;
+    
+}
+
+.shop{
+    height: 100vh; 
+}
+
+.box01{
+    width: 100%;
+    height: 100px;
+}
+
+.goshop{
+    width: 100%;
+    text-align: center;
+    
+}
+
+#goshop{
+    width: 100%;
+    height: 100%;
+}
+
+.box02{
+    width:100%;
+    height: 800px;
+    /* background-color: rgba(0, 255, 255, 0.26); */
+    position: absolute;
+    z-index: 1;
+    /* margin: 0 auto; */
+    text-align: center;
+    /* right: 25vw; */
+    top: 0;
+    /* padding-right: 20px; */
+}
+
+.space_1{
+    width: 100%;
+
+}
+
+.space_2{
+    width: 40px;
+    height: 20px;
+}
+
+
+.b{
+    width: 100%;
+}
+
+.btn{
+    /* position: relative; */
+    margin: 0 auto;
+    z-index: 5;
+    width: 110px;
+    height: 50px;
+    margin-top: 87vh;
+    border-radius: 15px;
+    background-color: rgba(212, 27, 83, 0.911);
+    color: white;
+    font-family: 微軟正黑體;
+    letter-spacing: 2px;
+    font-weight: bold;
+    outline:none;
+}
+
+.a{
+    width: 100%;
+    height: 500px;
+    margin-left: 15vw;
+    background-color: rgba(212, 27, 83, 0.911);
+    margin-top: 43vh;
+}
+
+
+
+.c{
+    /* width: 100%; */
+    height: 220px;
+    margin-left: 15vw;
+    background-color: rgba(212, 27, 83, 0.911);
+    margin-top: 88vh;
+}
+
+/* bottom */
+
+#icon{
+    width: 40px;
+    height: 210px;
+    position: fixed;
+    right: 15px;
+    bottom: 180px;
+    z-index: 20;
+}
+
+.icon{
+    width: 40px;
+    height: 30px;
+}
+
+.space-1{
+    width: 40px;
+    height: 20px;
+}
+
+
+
+
+
+/* tablet版 */
+
+@media screen and (max-width: 736px) {
+    .pc {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+
+/* 視窗設定 */
+#space-ta{
+    width: 100%;
+    height: 15vh;
+}
+
+#light-ta{
+    z-index: -10;
+    width: 100%;
+    height: 3300px;
+    background-image: url("css/img/燈籠點12秒.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+}
+
+.box00{
+    width: 375px;
+    height: 580px;
+    z-index: -5;
+    /* position: relative;
+    top: 15vh; */
+    margin: 0 auto;
+}
+
+.box01{
+    width: 100%;
+    height: 100px;
+}
+
+.goshop-ta{
+    width: 100%;
+    text-align: center;
+    
+}
+
+#goshop-ta{
+    width: 100%;
+    height: 100%;
+}
+
+.box02-ta{
+    width:100%;
+    height: 800px;
+    /* background-color: rgba(0, 255, 255, 0.26); */
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    /* right: 10vw; */
+    top: 0;
+    /* padding-right: 20px; */
+}
+
+.space_1{
+    width: 100%;
+
+}
+
+.space_2{
+    width: 40px;
+    height: 10px;
+}
+
+
+.b-ta{
+    width: 100%;
+}
+
+.btn-ta{
+    position: relative;
+    margin: 0 auto;
+    z-index: 5;
+    width: 100px;
+    height: 30px;
+    /* left: 12%; */
+    margin-top: 510px;
+    border-radius: 15px;
+    background-color: rgba(212, 27, 83, 0.911);
+    color: white;
+    font-family: 微軟正黑體;
+    letter-spacing: 2px;
+    font-weight: bold;
+    outline:none;
+    font-size: 10px;
+}
+
+.a-ta{
+    width: 120%;
+    height: 170px;
+    /* margin-left: 20vw; */
+    background-color: rgba(212, 27, 83, 0.911);
+    margin-top: 310px;
+}
+
+
+
+.c-ta{
+    width: 120%;
+    height: 170px;
+    /* margin-left: 20vw; */
+    background-color: rgba(212, 27, 83, 0.911);
+    margin-top: 500px;
+}
+/* bottom */
+
+#icon-ta{
+    width: 40px;
+    height: 210px;
+    position: fixed;
+    right: 15px;
+    bottom: 180px;
+    z-index: 20;
+}
+
+.icon-ta{
+    width: 40px;
+    height: 30px;
+}
+
+.space-1-ta{
+    width: 40px;
+    height: 20px;
+}
+
+
+}
+
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <!-- pc版 -->
+    <div class="pc">
+
+        <div id="space">
+                
+        </div>
+        
+
+                
+        <div id="light">
+            <div class="box00">
+                <img class="door"  src="img/拱門-7.gif" alt="">
+                <div class="box01"></div>   
+                
+                <a href="https://shop.olbeautyshop.com/ads/wall">
+                <img class="shop"  src="img/攤位01-03.gif" alt="">
+                </a>
+                <div class="box01"></div>    
+
+                <a href="https://shop.olbeautyshop.com/ads/wall">
+                <img class="shop"  src="img/攤位02-05.gif" alt="">
+                </a>
+                <div class="box01"></div>
+                
+                <a href="https://shop.olbeautyshop.com/ads/wall">
+                <img class="shop"  src="img/攤位03-04.gif" alt="">
+                </a>
+                <div class="box01"></div>    
+
+                <a href="https://shop.olbeautyshop.com/ads/wall">
+                <img class="shop"  src="img/攤位04-01.gif" alt="">
+                </a>
+                <div class="box01"></div>  
+
+                <!-- <img class="shop"  src="img/攤位.gif" alt="">
+                <div class="box01"></div>    
+                <img class="shop"  src="img/攤位.gif" alt="">
+                <div class="box01"></div> -->
+            </div>
+        
+            <a id="goshop" href="https://shop.olbeautyshop.com/ads/wall">   
+                <div class="goshop">
+                        <img src="img/底部-07.png" alt="">   
+                </div>
+            </a>
+            
+        </div>
+
+        <div class="box02">
+
+            <!-- 下面是點擊複製的部分 -->
+            <button class="btn" data-clipboard-text="D020D73C">
+                    點擊複製代碼
+                </button>
+            <!-- 上面是點擊複製的部分 -->
+
+
+            <!-- <div class="space_1"></div>
+            <div class="b">   
+            <a id="a" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="a"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b">   
+            <a id="c" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b">   
+            <a id="c" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b">   
+            <a id="c" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c"></div>
+            </a>
+            </div> -->
+
+            <!-- <div class="space_2"></div>
+            <div class="b">   
+            <a id="c" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b">   
+            <a id="c" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c"></div>
+            </a>
+            </div> -->
+
+
+        </div>
+
+        
+
+        <!-- icon -->
+        <div class="bottom">
+            <div id="icon">
+                <div class="icon">
+                    <a href="https://www.facebook.com/olbeauty123/">
+                        <img width="40px" height="40px" src="img/fb.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1"></div>
+
+                <div class="icon">
+                    <a href="https://www.olbeautyshop.com/">
+                        <img width="40px" height="40px" src="img/home.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1"></div>
+
+                <div class="icon">
+                    <a href="https://line.me/ti/p/%40rfj3101j">
+                        <img width="40px" height="40px" src="img/line.png" alt="">
+                    </a>
+                </div>
+
+                <div class="space-1"></div>
+                
+                <div class="icon">
+                    <a href="#space">
+                        <img width="40px" height="40px" src="img/top-04-01.png" alt="">
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Tablet版 -->
+
+    <div class="tablet">
+
+        <div id="space-ta"></div>
+
+        <!-- <div class="outside"></div> -->
+    <div id="light-ta">    
+        <div class="box00">
+            <img width="360px" height="570px" src="img/拱門-8.gif" alt="">
+            <div class="box01"></div> 
+            
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+            <img width="360px" height="570px" src="img/攤位01-ta-03.gif" alt="">
+            </a>
+            <div class="box01"></div>  
+            
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+            <img width="360px" height="570px" src="img/攤位02-ta-06.gif" alt="">
+            </a>
+            <div class="box01"></div> 
+            
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+            <img width="360px" height="570px" src="img/攤位03-ta-05.gif" alt="">
+            </a>
+            <div class="box01"></div>
+            
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+            <img width="360px" height="570px" src="img/攤位04-ta-01.gif" alt="">
+            </a>
+
+            <!-- <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt="">
+            <div class="box01"></div>    
+            <img width="360px" height="570px" src="img/攤位.gif" alt=""> -->
+        </div>
+
+        
+    </div>
+
+    <a id="goshop-ta" href="https://shop.olbeautyshop.com/ads/wall">   
+        <div class="goshop-ta">
+                <img width="360px" src="img/底部-08.png" alt="">   
+        </div>
+    </a>
+
+        <div class="box02-ta">
+
+            <!-- 下面是點擊複製的部分 -->
+                <button class="btn-ta" data-clipboard-text="D020D73C">
+                    點擊複製代碼
+                </button>
+            <!-- 上面是點擊複製的部分 -->
+
+
+            <!-- <div class="space_1"></div>
+            <div class="b-ta">   
+            <a id="a-ta" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="a-ta"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b-ta">   
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c-ta"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b-ta">   
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c-ta"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b-ta">   
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c-ta"></div>
+            </a>
+            </div> -->
+
+            <!-- <div class="space_2"></div>
+            <div class="b-ta">   
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c-ta"></div>
+            </a>
+            </div>
+
+            <div class="space_2"></div>
+            <div class="b-ta">   
+            <a id="c-ta" href="https://shop.olbeautyshop.com/ads/wall">
+                <div class="c-ta"></div>
+            </a>
+            </div> -->
+
+
+        </div>
+
+
+        
+        <!-- icon -->
+        <div class="bottom-ta">
+            <div id="icon-ta">
+                <div class="icon-ta">
+                    <a href="https://www.facebook.com/olbeauty123/">
+                        <img width="40px" height="40px" src="img/fb.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1-ta"></div>
+
+                <div class="icon-ta">
+                    <a href="https://www.olbeautyshop.com/">
+                        <img width="40px" height="40px" src="img/home.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="space-1-ta"></div>
+
+                <div class="icon-ta">
+                    <a href="https://line.me/ti/p/%40rfj3101j">
+                        <img width="40px" height="40px" src="img/line.png" alt="">
+                    </a>
+                </div>
+
+                <div class="space-1-ta"></div>
+                
+                <div class="icon-ta">
+                    <a href="#space-ta">
+                        <img width="40px" height="40px" src="img/top-04-01.png" alt="">
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!-- 下面是點擊複製的部分 -->
+    <script src="js/clipboard.min.js"></script>
+    <!-- <script>
+        var clipboard = new Clipboard('.btn');
+
+        clipboard.on('success', function(e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+        });
+    </script> -->
+<!-- 上面是點擊複製的部分 -->
+
+<!-- 下面是點擊複製的部分 -->
+<script>
+
+var copy = new Clipboard('.btn');
+
+copy.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+
+copy.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
+var cut = new Clipboard('.btn-ta');
+
+cut.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+
+cut.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+</script>
+<!-- 上面是點擊複製的部分 -->
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+    $('#top').click(function(){  
+            var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+             scrollTop: 0
+            }, 300);
+            return false;
+            });
+    </script>
+    
+</body>
+</html>
